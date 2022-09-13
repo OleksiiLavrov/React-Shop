@@ -626,6 +626,7 @@ margin-top: 160px;
 
 .filter-wrapper {
   display: flex;
+  flex-wrap: wrap;
   gap: 20px;
   justify-content: center;
   align-items: center;
@@ -827,6 +828,9 @@ margin-top: 160px;
 .btn-container{
   width: 300px;
   margin: auto;
+}
+.filter-wrapper {
+  flex-direction: column;
 }
 }
 
