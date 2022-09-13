@@ -10,6 +10,8 @@ export const StateContext = ({children}) => {
    const [totalQuantities, setTotalQuantities] = useState(0);  // total quantity of each product in cart
    const [qty, setQty] = useState(1);                          // current quantity of items to add
 
+   const [nameFilter, setNameFilter] = useState('');
+
    let foundProduct;
 
    const toggleCartItemQuantity = (id, value) => {
@@ -104,13 +106,15 @@ export const StateContext = ({children}) => {
          totalPrice,
          totalQuantities,
          qty,
+         nameFilter,
          incQty,
          decQty,
          onAdd,
          showCartOnClick,
          toggleCartItemQuantity,
          onRemove,
-         setShowCart
+         setShowCart,
+         setNameFilter
       }}>
          {children}
       </Context.Provider>

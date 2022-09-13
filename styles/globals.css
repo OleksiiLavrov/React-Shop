@@ -225,6 +225,7 @@ flex-direction: column;
   display: flex;
   justify-content: space-between;
 }
+
 .banner-desc button{
   border-radius: 15px;
   padding: 10px 16px;
@@ -236,6 +237,7 @@ flex-direction: column;
   font-weight: 500;
   cursor: pointer;
 }
+
 .banner-desc .left h3{
   font-weight: 900;
   font-size: 80px;
@@ -246,14 +248,13 @@ flex-direction: column;
 }
 .footer-banner-image{
   position: absolute;
-  /* top: -35%;
-  left: 8%; */
   top: -25%;
   left: 25%;
 }
 .banner-desc .right{
   line-height: 1.4;
-  width: 35%;
+  width: 40%;
+  text-align: right;
 }
 .banner-desc .right h3{
   font-weight: 800;
@@ -618,6 +619,66 @@ margin-top: 160px;
   margin-top: 10px;
 }
 
+.filter-container {
+  display: flex;
+  justify-content: center;
+}
+
+.filter-wrapper {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  background-color: #EBEBEB;
+  width: auto;
+  border-radius: 30px;
+  padding: 15px;
+}
+
+.filter-item {
+  background-color: #324D67;
+  color: #fff;
+  font-weight: 700;
+  padding: 8px 20px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+
+.filter-item:hover {
+  background-color: #000;
+  transition: 0.3s ease-in-out;
+}
+
+.filter-input-container {
+  position: relative;
+}
+
+.filter-input {
+  box-sizing: border-box;
+  border: none;
+  border-radius: 20px;
+  padding: 8px 20px;
+  font-size: 1em;
+  font-weight: 700;
+  color: #324D67;
+}
+
+.filter-input:focus {
+  outline: none;
+}
+
+.filter-search {
+  position: absolute;
+  top: 0; right: 0;
+  height: 100%;
+  width: 40px;
+  border-left: 3px solid #EBEBEB;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 @media screen and (max-width:800px) {
   .hero-banner-container{
     height: 560px;
@@ -629,14 +690,21 @@ margin-top: 160px;
     right: -6%;
   }
   .footer-banner-container{
-    height: 560px;
+    height: auto;
     margin-top: 80px;
   }
   .footer-banner-image{
     width: 77%;
-    left: 30%;
-    top: 6%;
-    height: 56%
+    height: auto;
+    left: 40%;
+    top: -15%;
+  }
+  .banner-desc{
+    flex-direction: column;
+    position: relative;
+  }
+  .banner-desc .left {
+    width: 100%;
   }
   .banner-desc .left h3{
     font-weight: 900;
@@ -645,6 +713,9 @@ margin-top: 160px;
   }
   .banner-desc .left p{
     margin:18px;
+  }
+  .banner-desc .right {
+    width: 100%;
   }
   .banner-desc .right h3{
     font-size: 45px;
@@ -758,3 +829,4 @@ margin-top: 160px;
   margin: auto;
 }
 }
+
